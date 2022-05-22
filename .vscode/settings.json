@@ -1,4 +1,12 @@
 {
+  "css.validate": false,
+  "editor.wordWrap": "on",
   "files.insertFinalNewline": true,
-  "editor.wordWrap": "on"
+  "workbench.editor.enablePreview": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.quickSuggestions": {
+    "strings": true,
+    "comments": true,
+    "other": true
+  }
 }

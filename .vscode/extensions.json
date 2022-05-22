@@ -1,16 +1,22 @@
 {
   "recommendations": [
     "wmaurer.change-case",
+    "pranaygp.vscode-css-peek",
     "josefbiehler.cypress-fixture-intellisense",
     "shelex.vscode-cy-helper",
     "andrew-codes.cypress-snippets",
     "cliffsu.cypress-snippets",
+    "ms-azuretools.vscode-docker",
     "dbaeumer.vscode-eslint",
     "eamodio.gitlens",
     "ecmel.vscode-html-css",
     "lokalise.i18n-ally",
     "antfu.iconify",
+    "firsttris.vscode-jest-runner",
+    "onecentlin.laravel-blade",
+    "ritwickdey.liveserver",
     "shd101wyy.markdown-preview-enhanced",
+    "ahmadalli.vscode-nginx-conf",
     "christian-kohler.npm-intellisense",
     "nrwl.angular-console",
     "tnrich.vscode-extension-open-cypress",
@@ -18,12 +24,14 @@
     "xdebug.php-debug",
     "bmewburn.vscode-intelephense-client",
     "esbenp.prettier-vscode",
+    "l13rary.l13-projects",
     "sonarsource.sonarlint-vscode",
     "chrisbreiding.test-utils",
     "gruntfuggly.todo-tree",
     "fabiospampinato.vscode-todo-plus",
     "antfu.unocss",
     "vue.volar",
+    "voorjaar.windicss-intellisense",
     "redhat.vscode-yaml"
   ]
 }
