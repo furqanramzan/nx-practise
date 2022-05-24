@@ -13,6 +13,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.23.1",
     "@nrwl/cli": "14.1.7",
+    "@nrwl/devkit": "14.1.7",
     "@nrwl/eslint-plugin-nx": "14.1.7",
     "@nrwl/jest": "14.1.7",
     "@nrwl/js": "^14.1.7",
