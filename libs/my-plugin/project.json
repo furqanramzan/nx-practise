@@ -43,11 +43,9 @@
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/my-plugin"],
+      "executor": "@nxext/vitest:vitest",
       "options": {
-        "jestConfig": "libs/my-plugin/jest.config.ts",
-        "passWithNoTests": true
+        "command": "run --coverage"
       }
     }
   },

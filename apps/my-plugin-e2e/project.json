@@ -4,11 +4,16 @@
   "sourceRoot": "apps/my-plugin-e2e/src",
   "targets": {
     "e2e": {
-      "executor": "@nrwl/nx-plugin:e2e",
+      "executor": "@nxext/vitest:vitest",
       "options": {
-        "target": "my-plugin:build",
-        "jestConfig": "apps/my-plugin-e2e/jest.config.ts"
-      }
+        "command": "run"
+      },
+      "dependsOn": [
+        {
+          "target": "build",
+          "projects": "dependencies"
+        }
+      ]
     }
   },
   "tags": [],
