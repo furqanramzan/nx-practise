@@ -8,5 +8,8 @@
     "strings": true,
     "comments": true,
     "other": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
