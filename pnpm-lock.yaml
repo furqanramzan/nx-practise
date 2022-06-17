@@ -9,7 +9,6 @@ specifiers:
   '@nrwl/linter': 14.3.2
   '@nrwl/nx-plugin': 14.3.2
   '@nrwl/workspace': 14.3.2
-  '@nxext/vitest': ^14.0.0
   '@types/node': 16.11.7
   '@typescript-eslint/eslint-plugin': 5.24.0
   '@typescript-eslint/parser': 5.24.0
@@ -38,7 +37,6 @@ devDependencies:
   '@nrwl/linter': 14.3.2_2uyjecajxr2zcfya2q63wtiloi
   '@nrwl/nx-plugin': 14.3.2_rchyymlbrkcsoqxjebaq4jbbie
   '@nrwl/workspace': 14.3.2_4uaktg4smu7cq3lf5xt3wgy7je
-  '@nxext/vitest': 14.0.0_nx@14.3.2
   '@types/node': 16.11.7
   '@typescript-eslint/eslint-plugin': 5.24.0_oreqwpabptstx3nnxgar4necna
   '@typescript-eslint/parser': 5.24.0_dirlon5mihsay42fpwhjobmlby
@@ -958,14 +956,6 @@ packages:
       - ts-node
       - typescript
       - utf-8-validate
-    dev: true
-
-  /@nxext/vitest/14.0.0_nx@14.3.2:
-    resolution: {integrity: sha512-aGfHDfRmNJNvn4Ld0Krs0rDAGmAaMLHh4QmWlmoorvxva4Ilsd7fnJHix74xdJqJ6/fmMViR+N6dremAnCaksw==}
-    dependencies:
-      '@nrwl/devkit': 14.3.2_nx@14.3.2
-    transitivePeerDependencies:
-      - nx
     dev: true
 
   /@parcel/watcher/2.0.4:

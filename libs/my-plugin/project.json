@@ -41,12 +41,6 @@
       "options": {
         "lintFilePatterns": ["libs/my-plugin/**/*.ts"]
       }
-    },
-    "test": {
-      "executor": "@nxext/vitest:vitest",
-      "options": {
-        "command": "run --coverage"
-      }
     }
   },
   "tags": []

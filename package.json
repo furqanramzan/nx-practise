@@ -19,7 +19,6 @@
     "@nrwl/linter": "14.3.2",
     "@nrwl/nx-plugin": "14.3.2",
     "@nrwl/workspace": "14.3.2",
-    "@nxext/vitest": "^14.0.0",
     "@types/node": "16.11.7",
     "@typescript-eslint/eslint-plugin": "5.24.0",
     "@typescript-eslint/parser": "5.24.0",
