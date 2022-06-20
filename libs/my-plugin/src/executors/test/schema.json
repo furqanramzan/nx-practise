@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "title": "Vitest executor",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "vitestConfig": {
+      "type": "string",
+      "description": "Vitest config"
+    },
+    "command": {
+      "type": "string",
+      "description": "Vitest command to run"
+    },
+    "passWithNoTests": {
+      "type": "boolean",
+      "description": "Pass the build if no tests are found",
+      "default": false
+    },
+    "testNamePattern": {
+      "type": "string",
+      "description": "Pattern to match test names"
+    }
+  },
+  "required": ["command"]
+}

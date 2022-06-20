@@ -41,6 +41,13 @@
       "options": {
         "lintFilePatterns": ["libs/my-plugin/**/*.ts"]
       }
+    },
+    "test": {
+      "executor": "@coc/my-plugin:test",
+      "options": {
+        "vitestConfig": "libs/my-plugin/vitest.config.ts",
+        "command": "run"
+      }
     }
   },
   "tags": []
