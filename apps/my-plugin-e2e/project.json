@@ -3,9 +3,10 @@
   "projectType": "application",
   "sourceRoot": "apps/my-plugin-e2e/src",
   "targets": {
-    "e2e": {
-      "executor": "@nxext/vitest:vitest",
+    "test": {
+      "executor": "@coc/my-plugin:test",
       "options": {
+        "vitestConfig": "apps/my-plugin-e2e/vitest.config.ts",
         "command": "run"
       },
       "dependsOn": [

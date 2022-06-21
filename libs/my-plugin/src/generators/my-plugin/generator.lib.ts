@@ -55,7 +55,7 @@ function addFiles(tree: Tree, options: NormalizedSchema) {
   );
 }
 
-export default async function (tree: Tree, options: MyPluginGeneratorSchema) {
+export async function generator(tree: Tree, options: MyPluginGeneratorSchema) {
   const normalizedOptions = normalizeOptions(tree, options);
   addProjectConfiguration(tree, normalizedOptions.projectName, {
     root: normalizedOptions.projectRoot,
@@ -71,3 +71,5 @@ export default async function (tree: Tree, options: MyPluginGeneratorSchema) {
   addFiles(tree, normalizedOptions);
   await formatFiles(tree);
 }
+
+export default generator;

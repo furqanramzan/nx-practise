@@ -1,8 +1,8 @@
 import { ExecutorContext } from '@nrwl/devkit';
-import { VitestExecutorOptions } from './schema';
+import { BuildExecutorOptions } from './schema';
 import executor from './executor.lib';
 
-let options: VitestExecutorOptions;
+let options: BuildExecutorOptions;
 let mockContext: ExecutorContext;
 
 beforeEach(async () => {
@@ -32,16 +32,16 @@ beforeEach(async () => {
         proj: {
           root: 'proj',
           targets: {
-            test: {
-              executor: '@coc/my-plugin:test',
+            build: {
+              executor: '@coc/my-plugin:build',
             },
           },
         },
       },
-      npmScope: 'test',
+      npmScope: 'build',
     },
     target: {
-      executor: '@coc/my-plugin:test',
+      executor: '@coc/my-plugin:build',
     },
     cwd: '/root',
     isVerbose: true,

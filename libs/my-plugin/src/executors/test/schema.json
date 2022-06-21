@@ -7,21 +7,21 @@
   "properties": {
     "vitestConfig": {
       "type": "string",
-      "description": "Vitest config"
+      "description": "The path to the Vitest configuration file."
     },
     "command": {
       "type": "string",
-      "description": "Vitest command to run"
+      "description": "Vitest command to run."
     },
     "passWithNoTests": {
       "type": "boolean",
-      "description": "Pass the build if no tests are found",
+      "description": "Pass the build if no tests are found.",
       "default": false
     },
     "testNamePattern": {
       "type": "string",
-      "description": "Pattern to match test names"
+      "description": "Pattern to match test names."
     }
   },
-  "required": ["command"]
+  "required": ["vitestConfig", "command"]
 }

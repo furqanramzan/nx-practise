@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "generators": {
     "my-plugin": {
-      "factory": "./src/generators/my-plugin/generator",
+      "factory": "./src/generators/my-plugin/generator.lib",
       "schema": "./src/generators/my-plugin/schema.json",
       "description": "my-plugin generator"
     }

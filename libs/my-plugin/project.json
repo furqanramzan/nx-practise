@@ -8,7 +8,40 @@
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/my-plugin",
-        "main": "libs/my-plugin/src/index.ts",
+        "main": "libs/my-plugin/src/index.lib.ts",
+        "tsConfig": "libs/my-plugin/tsconfig.lib.json",
+        "assets": [
+          "libs/my-plugin/*.md",
+          {
+            "input": "./libs/my-plugin/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./libs/my-plugin/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./libs/my-plugin",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./libs/my-plugin",
+            "glob": "executors.json",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "tsup": {
+      "executor": "@coc/my-plugin:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/my-plugin",
+        "entry": "libs/my-plugin/src/index.ts",
+        "tsupConfig": "libs/my-plugin/tsup.config.ts",
         "tsConfig": "libs/my-plugin/tsconfig.lib.json",
         "assets": [
           "libs/my-plugin/*.md",

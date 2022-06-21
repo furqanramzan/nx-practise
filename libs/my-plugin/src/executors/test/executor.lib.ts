@@ -1,5 +1,6 @@
 import { VitestExecutorOptions } from './schema';
-import { ExecutorContext, joinPathFragments } from '@nrwl/devkit';
+import { join } from 'path';
+import { ExecutorContext } from '@nrwl/devkit';
 import { default as runCommands } from '@nrwl/workspace/src/executors/run-commands/run-commands.impl';
 
 function collectOptions(options: VitestExecutorOptions) {
@@ -14,19 +15,22 @@ function collectOptions(options: VitestExecutorOptions) {
   return cliOptions;
 }
 
-export default async function (
+export async function testExecutor(
   options: VitestExecutorOptions,
   context: ExecutorContext
 ) {
   const projectName = context.projectName || '';
   const projectDir = context.workspace.projects[projectName].root;
-  const projectRoot = joinPathFragments(`${context.root}/${projectDir}`);
+  const projectRoot = join(context.root, projectDir);
+  const vitestConfig = options.vitestConfig
+    ? join(context.root, options.vitestConfig)
+    : join(projectRoot, 'vitest.config.ts');
 
   const cliOptions = collectOptions(options);
 
   const result = await runCommands(
     {
-      command: `vitest ${options.command} ${cliOptions} -c ${options.vitestConfig} --dir ${projectRoot}`,
+      command: `vitest ${options.command} --config ${vitestConfig} --dir ${projectRoot} ${cliOptions}`,
       cwd: context.root,
       parallel: false,
       color: true,
@@ -38,3 +42,5 @@ export default async function (
     success: result,
   };
 }
+
+export default testExecutor;
