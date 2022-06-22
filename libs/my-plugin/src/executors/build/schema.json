@@ -5,10 +5,6 @@
   "description": "Builds using TSUP.",
   "type": "object",
   "properties": {
-    "entry": {
-      "type": "string",
-      "description": "The array of path of entry-point files."
-    },
     "tsupConfig": {
       "type": "string",
       "description": "TSUP config"
@@ -16,6 +12,14 @@
     "outputPath": {
       "type": "string",
       "description": "The output path of the generated files."
+    },
+    "outputBasePath": {
+      "type": "string",
+      "description": "The output base path of the generated files."
+    },
+    "main": {
+      "type": "string",
+      "description": "The name of the main entry-point file."
     },
     "tsConfig": {
       "type": "string",
@@ -46,7 +50,7 @@
       "default": "peerDependencies"
     }
   },
-  "required": ["entry"],
+  "required": ["main", "outputPath", "tsConfig"],
   "definitions": {
     "assetPattern": {
       "oneOf": [

@@ -40,7 +40,8 @@
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/my-plugin",
-        "entry": "libs/my-plugin/src/index.ts",
+        "outputBasePath": "src",
+        "main": "libs/my-plugin/src/index.ts",
         "tsupConfig": "libs/my-plugin/tsup.config.ts",
         "tsConfig": "libs/my-plugin/tsconfig.lib.json",
         "assets": [

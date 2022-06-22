@@ -1,12 +1,10 @@
-import type {
-  AssetGlob,
-  FileInputOutput,
-} from '@nrwl/workspace/src/utilities/assets';
+import type { AssetGlob } from '@nrwl/workspace/src/utilities/assets';
 
 export interface BuildExecutorOptions {
-  entry: Array<string>;
   tsupConfig: string;
   outputPath: string;
+  outputBasePath?: string;
+  main: string;
   tsConfig: string;
   assets: Array<AssetGlob | string>;
   watch: boolean;
@@ -14,10 +12,11 @@ export interface BuildExecutorOptions {
   buildableProjectDepsInPackageJsonType?: 'dependencies' | 'peerDependencies';
 }
 
-export interface NormalizedExecutorOptions extends BuildExecutorOptions {
-  root?: string;
-  sourceRoot?: string;
-  projectRoot?: string;
+export interface NormalizedBuildExecutorOptions extends BuildExecutorOptions {
+  root: string;
+  outDir: string;
+  projectName: string;
+  projectDir: string;
+  projectRoot: string;
   mainOutputPath: string;
-  files: Array<FileInputOutput>;
 }
