@@ -15,3 +15,10 @@
 ☐ add gitlab extention to vscode
 ☐ sort import
 ☐ Make scripts in all projects, serve, type-check, lint, build, deploy
+
+
+Nx Plugin:
+    ☐ Format build directory
+    ☐ Package json interface
+    ☐ Add Comment
+    ☐ Add Documentation
