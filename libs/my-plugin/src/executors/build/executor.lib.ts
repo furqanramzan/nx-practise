@@ -2,7 +2,7 @@ import { BuildExecutorOptions, NormalizedBuildExecutorOptions } from './schema';
 import { join, resolve } from 'path';
 import { ExecutorContext } from '@nrwl/devkit';
 import { CopyAssetsHandler } from '@nrwl/js/src/utils/copy-assets-handler';
-import { checkDependencies } from '@nrwl/js/src/utils/check-dependencies';
+import { checkDependencies } from './check-dependencies';
 import { updatePackageJson } from './update-package-json';
 import { default as runCommands } from '@nrwl/workspace/src/executors/run-commands/run-commands.impl';
 
@@ -65,6 +65,7 @@ export async function buildExecutor(
     });
     await assetHandler.processAllAssetsOnce();
     const { dependencies, target } = checkDependencies(context, tsConfig);
+
     updatePackageJson(options, context, target, dependencies);
   }
   return result;

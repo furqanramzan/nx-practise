@@ -5,6 +5,12 @@
     "declaration": true,
     "types": []
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["vitest.config.ts", "**/*.spec.ts", "**/*.test.ts"]
+  "include": ["**/*.ts"],
+  "exclude": [
+    "tsup.config.ts",
+    "vitest.config.ts",
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "**/*.d.ts"
+  ]
 }

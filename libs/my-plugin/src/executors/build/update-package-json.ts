@@ -80,6 +80,9 @@ export function updatePackageJson(
     : { name: context.projectName };
   addFilesInPackageJson(options, context, packageJson);
   writeJsonFile(`${options.outputPath}/package.json`, packageJson);
+  const projectName = context.projectName || '';
+  const targetName = context.targetName || '';
+  const configurationName = context.configurationName || '';
 
   if (
     dependencies.length > 0 &&
@@ -87,9 +90,9 @@ export function updatePackageJson(
   ) {
     updateBuildableProjectPackageJsonDependencies(
       context.root,
-      context.projectName,
-      context.targetName,
-      context.configurationName,
+      projectName,
+      targetName,
+      configurationName,
       target,
       dependencies,
       options.buildableProjectDepsInPackageJsonType
